@@ -1,0 +1,82 @@
+@use "../src/scss/util/" as u;
+
+.cartbox {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-radius: 0.55rem;
+  background-color: white;
+  border: 1px solid rgba(50, 50, 93, 0.1);
+  box-shadow: rgba(50, 50, 93, 0.05) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.15) 0px 30px 60px -30px;
+  translate: 50% 32%;
+  z-index: 3;
+  width: calc(100% - 1rem);
+
+  &__title,
+  &__footer {
+    padding: 1.5rem;
+  }
+
+  &__footer {
+    display: grid;
+    place-items: center;
+  }
+
+  &__title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__product {
+    display: flex;
+    flex-wrap: wrap;
+    width: max(14rem);
+    line-height: 1.5;
+
+    > span:last-child {
+      margin-left: 0.5rem;
+      font-weight: 700;
+    }
+  }
+
+  &__image {
+    width: 50px;
+  }
+
+  &__trash {
+    cursor: pointer;
+  }
+
+  &__empty {
+    display: grid;
+    place-items: center;
+    width: 20rem;
+    height: 7.875rem;
+
+    font-weight: 700;
+    color: u.$dark-grayish-blue;
+  }
+
+  &__button {
+    display: grid;
+    place-items: center;
+    border: 0;
+    outline: 0;
+    border-radius: 0.55rem;
+    background-color: u.$orange;
+    width: 100%;
+    padding: 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    margin-top: 1.5rem;
+    cursor: pointer;
+  }
+}

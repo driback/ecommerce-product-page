@@ -1,0 +1,52 @@
+@use "../../../scss/util/" as u;
+
+.button {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding-inline: 1rem;
+
+  &__incdec,
+  &__cart {
+    display: flex;
+    align-items: center;
+    background-color: u.$light-grayish-blue;
+    border-radius: 12px;
+  }
+
+  &__minus,
+  &__value,
+  &__plus {
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border-radius: 12px;
+  }
+
+  &__minus,
+  &__plus {
+    flex: 1 1 auto;
+    padding: 1.5rem;
+    border: 0;
+    outline: 0;
+  }
+
+  &__value {
+    flex: 1 1 60%;
+    font-weight: 700;
+  }
+
+  &__cart {
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    border: 0;
+    outline: 0;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: u.$orange;
+    color: u.$white;
+    fill: u.$white;
+  }
+}

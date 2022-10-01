@@ -1,0 +1,9 @@
+@use "../src/scss/util/" as u;
+
+@include u.breakpoint("laptop") {
+  .cartbox {
+    width: auto;
+    right: 0%;
+    translate: 0% 35%;
+  }
+}

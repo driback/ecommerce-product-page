@@ -1,0 +1,52 @@
+@use "../../../scss/util/" as u;
+
+.imageSlider {
+  //   border: 1px solid red;
+  overflow: clip;
+  position: relative;
+
+  &__con {
+    display: flex;
+    align-items: center;
+  }
+
+  &__image {
+    flex: 1 0 100%;
+    height: 18rem;
+    transition: translate 200ms ease-in;
+
+    > img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0% -50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 1rem;
+
+    > button {
+      outline: none;
+      border: none;
+      background-color: u.$white;
+      display: grid;
+      place-items: center;
+      padding: 0.5rem;
+      aspect-ratio: 1 / 1;
+      width: 40px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.thumbnail {
+  display: none;
+}

@@ -1,0 +1,74 @@
+@use "../src/scss/util/" as u;
+
+@include u.breakpoint("laptop") {
+  .button {
+    width: 100%;
+    flex-direction: row;
+    padding-inline: 0;
+
+    &__incdec {
+      flex: 1 1 15%;
+      width: max-content;
+    }
+
+    &__cart {
+      flex: 1 1 auto;
+      padding: 1rem;
+      cursor: pointer;
+      position: relative;
+      scale: 1;
+      transition: scale 75ms ease-in;
+
+      &::after,
+      &::before {
+        position: absolute;
+        content: "";
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+      }
+
+      &::after {
+        background-color: rgba(255, 255, 255, 0.5);
+        opacity: 0;
+        translate: -50% 0;
+        transition: opacity 75ms ease-in;
+      }
+
+      &::before {
+        background-color: u.$orange;
+        translate: -50% 0%;
+        z-index: -1;
+        filter: blur(1rem);
+        width: 90%;
+        height: 50%;
+      }
+
+      &:hover {
+        scale: 0.95;
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+
+    &__minus,
+    &__plus {
+      //   width: 40%;
+      flex: 1 1 10%;
+      padding: 1rem;
+      cursor: pointer;
+
+      &:disabled {
+        mix-blend-mode: luminosity;
+        cursor: not-allowed;
+      }
+    }
+
+    &__value {
+      flex: 1 1 auto;
+    }
+  }
+}

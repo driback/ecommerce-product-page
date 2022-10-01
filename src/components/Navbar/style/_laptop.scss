@@ -1,0 +1,68 @@
+@use "../../../scss/util/" as u;
+
+@include u.breakpoint("laptop") {
+  .navbar {
+    padding: 0;
+    // padding-inline: 1.25rem;
+
+    &__logo {
+      margin-left: 0;
+    }
+
+    &__links {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: max-content;
+      height: fit-content;
+      padding: 0;
+      translate: 0%;
+      flex-direction: row;
+
+      font-size: 1rem;
+      font-weight: 400;
+      color: u.$dark-grayish-blue;
+      margin-left: 4rem;
+    }
+
+    &__link {
+      display: block;
+      padding: 2rem 0;
+      font-size: 0.85rem;
+      cursor: pointer;
+      position: relative;
+      transition: color 100ms ease;
+
+      &:hover {
+        color: black;
+
+        &::before {
+          width: 100%;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 3px;
+        background-color: u.$orange;
+        transition: width 100ms ease;
+      }
+    }
+
+    &__avatar {
+      width: 50px;
+      margin-left: 1rem;
+      border: 2px solid transparent;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid u.$orange;
+      }
+    }
+  }
+}

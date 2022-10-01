@@ -1,0 +1,20 @@
+@use "../../../scss/util/" as u;
+
+@include u.breakpoint("laptop") {
+  .content {
+    &__title {
+      font-size: 2rem;
+    }
+
+    &__prices {
+      align-items: center;
+      width: 12rem;
+      flex-wrap: wrap;
+      row-gap: 0.5rem;
+    }
+
+    &__price {
+      margin-left: 0;
+    }
+  }
+}

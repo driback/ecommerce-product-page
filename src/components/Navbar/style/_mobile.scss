@@ -1,0 +1,99 @@
+@use "../../../scss/util/" as u;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  // border: 1px solid red;
+  padding: 1.25rem;
+  position: relative;
+  overflow-x: clip;
+  border-bottom: 1px solid u.$grayish-blue;
+
+  &__links,
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-left: 1rem;
+  }
+
+  &__button {
+    z-index: 3;
+  }
+
+  &__links {
+    margin-left: 2rem;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1.5rem;
+    font-weight: 700;
+    background-color: u.$background-col;
+    font-size: 1.25rem;
+    transition: all 150ms ease-in-out;
+    color: inherit;
+    z-index: 3;
+    // border: 1px solid red;
+
+    position: absolute;
+    top: 0;
+    left: -2rem;
+    width: 65vw;
+    height: 100vh;
+    padding: 1.5rem;
+    translate: -100%;
+    flex-direction: column;
+  }
+
+  &__close {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    width: 16px;
+
+    > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__right {
+    margin-left: auto;
+    gap: 1rem;
+  }
+
+  &__avatar,
+  &__cart {
+    width: 30px;
+  }
+
+  &__cart {
+    cursor: pointer;
+    position: relative;
+
+    &--item {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: u.$orange;
+      font-size: 0.5rem;
+      color: white;
+      border-radius: 1rem;
+      padding: 0.15rem 0.45rem;
+      translate: 0 -50%;
+    }
+  }
+
+  &__bscreen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: u.$black;
+    opacity: 0.8;
+    z-index: 2;
+    transition: all 150ms ease-in-out;
+  }
+}

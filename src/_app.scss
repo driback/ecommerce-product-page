@@ -1,0 +1,35 @@
+@use "../src/scss/util/" as u;
+
+.container {
+  width: 100vw;
+  display: grid;
+  min-height: 100vh;
+}
+
+@include u.breakpoint("laptop") {
+  .container {
+    width: 80vw;
+    margin-inline: auto;
+  }
+
+  header {
+    height: fit-content;
+    position: relative;
+  }
+
+  .main {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding-inline: 2.5rem;
+    // margin-top: 3rem;
+    width: 100%;
+    height: max-content;
+    justify-content: center;
+
+    &__image,
+    &__content {
+      flex: 0 1 37%;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@use "../../../scss/util/" as u;
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 1rem;
+
+  &__company {
+    color: u.$orange;
+  }
+
+  &__title {
+    font-size: 1.85rem;
+  }
+
+  &__desc {
+    font-size: 0.99rem;
+    color: u.$dark-grayish-blue;
+    line-height: 1.65;
+    width: 100%;
+  }
+
+  &__prices {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+  }
+
+  &__discountprice {
+    font-size: 2rem;
+  }
+
+  &__discount {
+    color: u.$orange;
+    padding: 0.25rem;
+    background-color: u.$pale-orange;
+    border-radius: 6px;
+    margin-left: 1rem;
+  }
+
+  &__price {
+    font-size: 1rem;
+    color: u.$grayish-blue;
+    margin-left: auto;
+    text-decoration: line-through;
+  }
+}
