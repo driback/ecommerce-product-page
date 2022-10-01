@@ -1,3 +1,12 @@
+import Image1 from "../../assets/image-product-1.jpg";
+import ImageThumbnail1 from "../../assets/image-product-1-thumbnail.jpg";
+import Image2 from "../../assets/image-product-2.jpg";
+import ImageThumbnail2 from "../../assets/image-product-2-thumbnail.jpg";
+import Image3 from "../../assets/image-product-3.jpg";
+import ImageThumbnail3 from "../../assets/image-product-3-thumbnail.jpg";
+import Image4 from "../../assets/image-product-4.jpg";
+import ImageThumbnail4 from "../../assets/image-product-4-thumbnail.jpg";
+
 import Images from "./Images";
 import Buttons from "./Buttons";
 import { useState, useEffect } from "react";
@@ -8,26 +17,26 @@ const ImageSlider = () => {
     imagesDetails: [
       {
         id: 1,
-        image: "src/assets/image-product-1.jpg",
-        thumbnail: "src/assets/image-product-1-thumbnail.jpg",
+        image: Image1,
+        thumbnail: ImageThumbnail1,
         alt: "product 1",
       },
       {
         id: 2,
-        image: "src/assets/image-product-2.jpg",
-        thumbnail: "src/assets/image-product-2-thumbnail.jpg",
+        image: Image2,
+        thumbnail: ImageThumbnail2,
         alt: "product 2",
       },
       {
         id: 3,
-        image: "src/assets/image-product-3.jpg",
-        thumbnail: "src/assets/image-product-3-thumbnail.jpg",
+        image: Image3,
+        thumbnail: ImageThumbnail3,
         alt: "product 3",
       },
       {
         id: 4,
-        image: "src/assets/image-product-4.jpg",
-        thumbnail: "src/assets/image-product-4-thumbnail.jpg",
+        image: Image4,
+        thumbnail: ImageThumbnail4,
         alt: "product 4",
       },
     ],
